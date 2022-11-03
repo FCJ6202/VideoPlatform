@@ -35,7 +35,9 @@ function UploadVideo() {
 
         let formData = new FormData();
         const config = {
-            header: { 'content-type': 'multipart/form-data' }
+            header: { 
+                'Access-Control-Allow-Origin': '*',
+                'content-type': 'multipart/form-data' }
         }
         console.log(files)
         formData.append("file", files[0])
