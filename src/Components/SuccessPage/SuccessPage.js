@@ -2,12 +2,10 @@ import { useState,useEffect } from "react"
 import React from 'react'
 import axios from 'axios';
 import ViewVideo from "../ViewVideo/ViewVideo";
-import Spinner from "../Spinner/Spinner";
 
 function SuccessPage() {
 
     const [Video, setVideo] = useState(null);
-    const [load, setload] = useState(false);
 
     const getVideo = () => {
         axios.get('https://fcjvideoplatform.herokuapp.com/getVideo')
