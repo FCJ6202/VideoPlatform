@@ -8,8 +8,8 @@ function ViewVideo(props) {
         <div className="card">
             <Player
             playsInline
-            poster={`http://localhost:4000/${props.Thumbnail}`}
-            src={`http://localhost:4000/${props.FilePath}`}
+            poster={`https://fcjvideoplatform.herokuapp.com/${props.Thumbnail}`}
+            src={`https://fcjvideoplatform.herokuapp.com/${props.FilePath}`}
             />
             <div className="card-body">
                 <h5 className="card-title">{props.Title}</h5>

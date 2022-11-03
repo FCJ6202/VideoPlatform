@@ -10,7 +10,7 @@ function SuccessPage() {
     const [load, setload] = useState(false);
 
     const getVideo = () => {
-        axios.get('http://localhost:4000/getVideo')
+        axios.get('https://fcjvideoplatform.herokuapp.com/getVideo')
             .then((response) => {
                 if (response.data.success) {
                     // response.data.VideoData.forEach(person => {

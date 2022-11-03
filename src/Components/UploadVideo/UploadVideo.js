@@ -13,7 +13,7 @@ function UploadVideo() {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:4000/addVideo',{Title,Description,FilePath,Thumbnail})
+        axios.post('https://fcjvideoplatform.herokuapp.com/addVideo',{Title,Description,FilePath,Thumbnail})
         .then(response => {
             if(response.data.success){
                 setSucc(0)
@@ -40,7 +40,7 @@ function UploadVideo() {
         console.log(files)
         formData.append("file", files[0])
 
-        axios.post('http://localhost:4000/uploadVideo', formData, config)
+        axios.post('https://fcjvideoplatform.herokuapp.com/uploadVideo', formData, config)
             .then(response => {
                 if (response.data.success) {
 
@@ -54,7 +54,7 @@ function UploadVideo() {
 
                     //gerenate thumbnail with this filepath !
 
-                    axios.post('http://localhost:4000/thumbnail', variable,)
+                    axios.post('https://fcjvideoplatform.herokuapp.com/thumbnail', variable,)
                         .then(response => {
                             if (response.data.success) {
                                 setThumbnail(response.data.thumbsFilePath)
@@ -97,7 +97,7 @@ function UploadVideo() {
                                 </Dropzone>
                             </div>
                             :
-                            <img src={`http://localhost:4000/${Thumbnail}`} alt="haha" />
+                            <img src={`https://fcjvideoplatform.herokuapp.com/${Thumbnail}`} alt="haha" />
                         }
     
                     <br /><br />
